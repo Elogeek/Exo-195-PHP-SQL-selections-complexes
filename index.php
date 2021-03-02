@@ -105,7 +105,6 @@
 
      /* 10. Sélectionnez et affichez tous les utilisateurs par ordre croissant, en limitant le résultat à 1 seul enregistrement */
      // TODO Votre code ici.
-     //count(*) peut par expl compter le number de panier d'un user
      $stmt = $connect->prepare("SELECT * FROM user ORDER BY id DESC LIMIT 1");
      $result = $stmt->execute();
      echo "<div class='classe-css-utilisateur>" . $result . "</div>";
@@ -145,7 +144,7 @@
  catch(PDOException $exception) {
      echo $exception->getMessage();
  }
-    ?>
+ ?>
 </body>
 </html>
 
